@@ -1,6 +1,5 @@
 #include "sort.h"
 
-void (int *a, int *b);
 int lomuto_partition(int *array, size_t size, int left, int right);
 void lomuto_sort(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
@@ -17,7 +16,7 @@ void quick_sort(int *array, size_t size);
  */
 int lomuto_partition(int *array, size_t size, int left, int right)
 {
-	int *pivot, above, below;
+	int *pivot, above, below, temp;
 
 	pivot = array + right;
 	for (above = below = left; below < right; below++)
