@@ -25,9 +25,9 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 		{
 			if (above < below)
 			{
-                temp = array + below;
-                array + below = array + above;
-                array + above = temp;
+                temp = array[below];
+                array[below] = array[above];
+                array[above] = temp;
 				print_array(array, size);
 			}
 			above++;
@@ -36,9 +36,9 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 
 	if (array[above] > *pivot)
 	{
-		temp = array + below;
-        array + below = array + above;
-        array + above = temp;
+		temp = array[below];
+        array[below] = array[above];
+        array[above] = temp;
 		print_array(array, size);
 	}
 
